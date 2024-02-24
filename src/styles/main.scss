@@ -1,0 +1,326 @@
+@use 'var';
+@use 'sass:math';
+
+// Função para Criar um Conversor de Pixels para EM no HTML
+@function pixelParaEM($alvoEmPixel, $contextoEmPixel: 16px) {
+    @return math.div($alvoEmPixel, $contextoEmPixel) + em;
+}
+
+
+body {
+    height: 100vh;
+    background-color: var.$bodyColor;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    padding: pixelParaEM(20px) pixelParaEM(10px);
+    background-color: var.$headerColor;
+    display: flex;
+    top: 0;
+
+    h1 {
+        font-family: var.$logoF;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var.$menuC;
+        font-size: pixelParaEM(30px);
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        li {
+            margin: pixelParaEM(10px);
+            
+
+            a {
+                font-family: var.$tittleF;
+                text-decoration: none;
+                color: var.$menuC;
+                font-size: pixelParaEM(20px);
+                text-transform: uppercase;
+                font-weight: 400;
+                transition: all transform 0.3s ease;
+
+                &:hover {
+                    font-weight: 800;
+                    border-bottom: pixelParaEM(2px) solid #fff;
+                }
+
+                
+            }
+        }
+    }
+}
+
+h2 {
+    text-align: center;
+    background-color: var.$button;
+}
+
+.info {
+    width: 80%;
+    margin: pixelParaEM(25px) 10%;
+
+    form {
+
+        display: flex;
+        justify-content: space-between;
+
+        legend {
+            margin: 5px 0;
+            text-align: center;
+            font-size: pixelParaEM(20px);
+            text-transform: uppercase;
+        }
+
+        .groupA, .groupB {
+            width: 25%;
+            background-color: var.$buttonActive;
+            border-radius: 5%;
+            margin-bottom: pixelParaEM(20px);
+        }
+
+        label {
+            margin: pixelParaEM(10px);
+            display: flex;
+            justify-content: end;
+
+            input {
+                margin-left: pixelParaEM(5px);
+                width: 20%;
+
+                &[type="number"] {
+                    text-align: end;
+                    margin: 0 pixelParaEM(10px);
+                }
+            }
+        }
+
+        button {
+            width: 25%;
+            border: pixelParaEM(5px) solid var.$button;
+            background-color: var.$button;
+            margin: pixelParaEM(10px);
+        
+            &:hover {
+                background-color: transparent;
+            }
+        
+            &.active {
+                background-color: var.$buttonActive;
+                border: pixelParaEM(5px) solid var.$buttonActive ;
+            }
+        }
+    }
+
+}
+
+main {
+
+    .buttons {
+        width: 80%;
+        margin: pixelParaEM(25px) 10%;
+        display: flex;
+        justify-content: space-between;
+    
+        button {
+        padding: pixelParaEM(10px) pixelParaEM(80px);
+        border-radius: 5%;
+        border: pixelParaEM(5px) solid var.$button;
+        background-color: var.$button;
+    
+        &:hover {
+            background-color: transparent;
+        }
+    
+        &.active {
+            background-color: var.$buttonActive;
+            border: pixelParaEM(5px) solid var.$buttonActive ;
+        }
+        }
+    }
+    
+    .viewmenu {
+        width: 80%;
+        margin: 02% 10%;
+        background-color: var.$buttonActive;
+    }
+
+    button {
+        width: 25%;
+        border-radius: 5%;
+        border: none;
+        background-color: var.$textC;
+        cursor: pointer;
+    }
+}
+
+section#treinos {
+    .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+    .grid-item {
+    width: calc(33.33% - 20px);
+    margin: pixelParaEM(10px);
+    background-color: var.$buttonActive;
+    text-align: center;
+
+        img {
+            height: pixelParaEM(253px);
+            width: pixelParaEM(253px);
+        }
+
+        h2, p {
+            margin: pixelParaEM(10px);
+        }
+    }
+}
+
+
+.menu-item {
+    display: inline-block;
+    margin: 0 pixelParaEM(15px);
+    cursor: pointer;
+
+    &.active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+@media screen and (min-width: var.$tabletMin) and (max-width: var.$tabletMax) {
+
+}
+
+@media screen and (max-width: var.$mobile) {
+    header {
+        padding: pixelParaEM(20px) pixelParaEM(10px);
+    
+        h1 {
+            font-size: pixelParaEM(20px);
+        }
+    
+        ul {
+            li {
+                margin: pixelParaEM(5px);
+                
+                a {
+                    font-size: pixelParaEM(15px);
+    
+                    &:hover {
+                        border-bottom: pixelParaEM(2px) solid #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+    .info {
+        width: 100%;
+        margin: pixelParaEM(25px) 10%;
+    
+        form {
+            display: block;
+            legend {
+                font-size: pixelParaEM(18px);
+            }
+    
+            .groupA, .groupB {
+                width: 80%;
+                border-radius: 5%;
+                margin: 5% 10%;
+            }
+    
+            label {
+                margin: pixelParaEM(10px);
+                font-size: pixelParaEM(12px);
+    
+                input {
+                    margin-left: pixelParaEM(5px);
+                    width: 50%;
+    
+                    &[type="number"] {
+                        margin: 0 pixelParaEM(10px);
+                    }
+                }
+            }
+    
+            button {
+                justify-content: center;
+                width: 80%;
+                margin: 5% 10%;
+                border: pixelParaEM(5px) solid var.$button;
+            
+                &.active {
+                    border: pixelParaEM(5px) solid var.$buttonActive ;
+                }
+            }
+        }
+    
+    }
+    
+    main {
+        .buttons {
+            width: 80%;
+            margin: pixelParaEM(25px) 10%;
+        
+            button {
+            padding: pixelParaEM(5px) pixelParaEM(40px);
+            border-radius: 5%;
+            border: pixelParaEM(5px) solid var.$button;
+            
+                &.active {
+                    border: pixelParaEM(5px) solid var.$buttonActive ;
+                }
+            }
+        }
+        
+        .viewmenu {
+            width: 80%;
+            margin: 02% 10%;
+        }
+    
+        button {
+            width: 25%;
+        }
+    }
+    
+    section#treinos {
+        .grid-item {
+        width: calc(50% - 20px);
+        margin: pixelParaEM(10px);
+    
+            img {
+                height: pixelParaEM(140px);
+                width: pixelParaEM(140px);
+            }
+    
+            h2 {
+                margin: pixelParaEM(05px);
+            }
+        }
+    }
+    
+    .menu-item {
+        margin: 0 pixelParaEM(15px);
+    }
+}

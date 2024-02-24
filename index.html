@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia</title>
+    <link rel="stylesheet" href="./build/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@200;400&family=Satisfy&display=swap" rel="stylesheet">
+    <script src="./build/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dark Trainer</h1>
+        <nav>
+            <ul>
+                <li class="menu-item" onclick="scrollToSection('treinos')"><a href="#Pesos">Pesos</a></li>
+                <li class="menu-item" onclick="scrollToSection('contato')"><a href="#treinos">Treinos</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="Pesos" class="viewmenu info">
+                <h2>Pesos</h2>
+                <form id="registroForm1">
+                    <div class="groupA">
+                        <legend>Grupo A (3x10)</legend>
+                    <label>
+                        Puxada p/ Frente:
+                        <input type="number" name="puxada" step="5" min="0" value="0"> kg
+                    </label>
+                    <label>
+                        Remada Baixa:
+                        <input type="number" name="remada" step="5" min="0" value="0"> kg
+                    </label>
+                    <label>
+                        Rosca Direta:
+                        <input type="number" name="Roscad" step="5" min="0" value="0"> kg
+                    </label>
+                    <label>
+                        Supino:
+                        <input type="number" name="supino" step="5" min="0" value="0"> kg
+                    </label>
+                    <label>
+                        Flexão:
+                        <input type="number" name="flexao" step="5" min="0" value="0"> kg
+                    </label>
+                    <label>
+                        Agachamento:
+                        <input type="number" name="agachamento" step="5" min="0" value="0"> kg
+                    </label>
+                    <label>
+                        Leg Press:
+                        <input type="number" name="Leg-Press" step="5" min="0" value="0"> kg
+                    </label>
+                    <label>
+                        Agacham. Bulgaro:
+                        <input type="number" name="Bulgaro" step="5" min="0" value="0"> kg
+                    </label>
+                    <label>
+                        Adutor:
+                        <input type="number" name="Adutor" step="5" min="0" value="0"> kg
+                    </label>
+                    </div>
+                    <div class="groupB">
+                        <legend>Grupo B (3x)</legend>
+                        <label>
+                            Voador:
+                            <input type="number" name="voador" step="5" min="0" value="0"> kg
+                        </label>
+                        <label>
+                            Tríceps Roldana:
+                            <input type="number" name="triceps-roldana" step="5" min="0" value="0"> kg
+                        </label>
+                        <label>
+                            Tríceps Corda:
+                            <input type="number" name="Tríceps Corda" step="5" min="0" value="0"> kg
+                        </label>
+                        <label>
+                            Elevação Lateral:
+                            <input type="number" name="Elevação Lateral" step="5" min="0" value="0"> kg
+                        </label>
+                        <label>
+                            Lombar:
+                            <input type="number" name="Lombar" step="5" min="0" value="0"> kg
+                        </label>
+                        <label>
+                            Flexor Sentado:
+                            <input type="number" name="Flexor Sentado" step="5" min="0" value="0"> kg
+                        </label>
+                        <label>
+                            Abdutor:
+                            <input type="number" name="Abdutor" step="5" min="0" value="0"> kg
+                        </label>
+                        <label>
+                            Flexão Plantar:
+                            <input type="number" name="Flexão Plantar" step="5" min="0" value="0"> kg
+                        </label>
+                        <label>
+                            Leg Horizontal:
+                            <input type="number" name="Leg Horizontal" step="5" min="0" value="0"> kg
+                        </label>
+                    </div>
+                    <button type="button" onclick="registrar('registroForm1')">Registrar</button>
+                </form>
+            </div>
+            <div id="treinos" class="buttons">
+                <button id="btnA" onclick="toggleContent('a')" class="active">A</button>
+                <button id="btnB" onclick="toggleContent('b')">B</button>
+                <button id="btnC" onclick="toggleContent('c')">A/B</button>
+            </div>
+            <div id="contentA" class="viewmenu content active">
+                <section id="treinos">
+                    <div class="grid">
+                        <div class="grid-item">
+                            <img src="build/images/puxada pra frente.webp" alt="Puxada p/ Frente">
+                            <h2>Puxada p/ Frente</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/remada baixa.webp" alt="Remada Baixa">
+                                <h2>Remada Baixa</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/rosca direita.gif" alt="Rosca Direta">
+                                <h2>Rosca Direta</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/supino.webp" alt="Supino">
+                                <h2>Supino</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/flexao.webp" alt="Flexão">
+                                <h2>Flexão</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/agachamento.gif" alt="Agachamento">
+                                <h2>Agachamento</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/leg-press 45.webp" alt="Leg press">
+                                <h2>Leg press</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/agachamento-bulgaro.gif" alt="Agachamento bulgaro">
+                                <h2>Agachamento Bulgaro</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/adutor fechar.webp" alt="Adutor">
+                                <h2>Adutor</h2>
+                        </div>
+                </section>
+            </div>
+            <div id="contentB" class="viewmenu content">
+                <section id="treinos">
+                    <div class="grid">
+                        <div class="grid-item">
+                            <img src="build/images/voador.webp" alt="Voador">
+                                <h2>Voador</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/triceps roldana.webp" alt="Tríceps Roldana">
+                                <h2>Tríceps Roldana</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/triceps corda.webp" alt="Triceps Corda">
+                                <h2>Triceps Corda</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/elevação lateral.webp" alt="Elevação Lateral">
+                                <h2>Elevação Lateral</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/lombar.gif" alt="Lombar">
+                                <h2>Lombar</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/flexor sentado.gif" alt="Flexor Sentado">
+                                <h2>Flexor Sentado</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/abdutor abrir.webp" alt="Abdutor">
+                                <h2>Abdutor</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/flexão plantar.gif" alt="Flexão Plantar">
+                                <h2>Flexão Plantar</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/leg horizontal.gif" alt="Leg Horizontal">
+                                <h2>Leg Horizontal</h2>
+                        </div>
+                </section>
+            </div>
+            <div id="contentC" class="viewmenu content">
+                <section id="treinos">
+                    <div class="grid">
+                        <div class="grid-item">
+                            <img src="build/images/puxada pra frente.webp" alt="Puxada p/ Frente">
+                            <h2>Puxada p/ Frente</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/remada baixa.webp" alt="Remada Baixa">
+                                <h2>Remada Baixa</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/rosca direita.gif" alt="Rosca Direta">
+                                <h2>Rosca Direta</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/supino.webp" alt="Supino">
+                                <h2>Supino</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/flexao.webp" alt="Flexão">
+                                <h2>Flexão</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/agachamento.gif" alt="Agachamento">
+                                <h2>Agachamento</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/leg-press 45.webp" alt="Leg press">
+                                <h2>Leg press</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/agachamento-bulgaro.gif" alt="Agachamento bulgaro">
+                                <h2>Agachamento Bulgaro</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/adutor fechar.webp" alt="Adutor">
+                                <h2>Adutor</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/voador.webp" alt="Voador">
+                                <h2>Voador</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/triceps roldana.webp" alt="Tríceps Roldana">
+                                <h2>Tríceps Roldana</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/triceps corda.webp" alt="Triceps Corda">
+                                <h2>Triceps Corda</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/elevação lateral.webp" alt="Elevação Lateral">
+                                <h2>Elevação Lateral</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/lombar.gif" alt="Lombar">
+                                <h2>Lombar</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/flexor sentado.gif" alt="Flexor Sentado">
+                                <h2>Flexor Sentado</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/abdutor abrir.webp" alt="Abdutor">
+                                <h2>Abdutor</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/flexão plantar.gif" alt="Flexão Plantar">
+                                <h2>Flexão Plantar</h2>
+                        </div>
+                        <div class="grid-item">
+                            <img src="build/images/leg horizontal.gif" alt="Leg Horizontal">
+                                <h2>Leg Horizontal</h2>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

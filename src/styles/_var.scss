@@ -1,0 +1,32 @@
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Containers
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+// Paleta
+$headerColor: #9ADBEF;
+$bodyColor: #BDE5E5;
+$buttonActive: #D2BFDD;
+$button: #FBF6BC;
+$menuC: #000;
+$textC: #fff;
+
+// Fonts
+$logoF: 'Satisfy', cursive; 
+$tittleF: 'DM Serif Display', serif;
+$textF: 'Outfit', sans-serif;;
+
+// Breakpoints
+$tabletMin: 769px;
+$tabletMax: 1023px;
+$mobile: 768px; 
